@@ -16,7 +16,14 @@
     <header class="glass-header">
         <div class="header-container">
             <div class="logo">Orom<span>.uz</span></div>
-            <a href="#contact" class="btn-sm">Bog'lanish</a>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <select id="lang-select" style="background: rgba(255,255,255,0.4); border: 1px solid rgba(200,200,200,0.5); border-radius: 8px; font-family: Outfit; padding: 4px 8px; color: #333; cursor: pointer; backdrop-filter: blur(10px); outline: none;">
+                    <option value="uz">UZ</option>
+                    <option value="ru">RU</option>
+                    <option value="en">EN</option>
+                </select>
+                <a href="#contact" class="btn-sm" data-i18n="contactBtn">Bog'lanish</a>
+            </div>
         </div>
     </header>
 
@@ -24,10 +31,10 @@
     <section class="banner" id="home">
         <div class="banner-overlay"></div>
         <div class="banner-content fade-in-up">
-            <span class="badge">Yangi To'plam 2026</span>
-            <h1>Orzudagidek Qulaylik</h1>
-            <p>Sifatli ko'rpa va yostiqlar bilan har bir tun shirin tushlarga boy bo'lsin.</p>
-            <a href="#contact" class="btn-primary">
+            <span class="badge" data-i18n="bannerBadge">Yangi To'plam 2026</span>
+            <h1 data-i18n="bannerTitle">Orzudagidek Qulaylik</h1>
+            <p data-i18n="bannerDesc">Sifatli ko'rpa va yostiqlar bilan har bir tun shirin tushlarga boy bo'lsin.</p>
+            <a href="#contact" class="btn-primary" data-i18n="buyBtn">
                 Buyurtma berish <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
@@ -36,30 +43,63 @@
     <!-- Mahsulotlar -->
     <section class="products" id="products">
         <div class="section-header">
-            <h2>Bizning Mahsulotlar</h2>
-            <p>Sog'lig'ingiz va ajoyib dam olishingiz uchun</p>
+            <h2 data-i18n="productsTitle">Bizning Mahsulotlar</h2>
+            <p data-i18n="productsDesc">Sog'lig'ingiz va ajoyib dam olishingiz uchun</p>
         </div>
 
         <div class="product-grid">
             <div class="product-card">
                 <div class="img-wrapper">
                     <img src="https://images.uzum.uz/d36f9mj4eu2s0bgimjf0/t_product_540_high.jpg" alt="Yostiqlar">
-                    <span class="tag">Premium</span>
+                    <span class="tag" data-i18n="tagPremium">Premium</span>
                 </div>
                 <div class="product-info">
-                    <h3>Ortopedik Yostiqlar</h3>
-                    <p>Bo'yin og'riqlarisiz, chuqur va tiniq uyqu kafolati. Xotira effektiga ega.</p>
+                    <h3 data-i18n="pillowTitle">Ortopedik Yostiqlar</h3>
+                    <p data-i18n="pillowDesc">Bo'yin og'riqlarisiz, chuqur va tiniq uyqu kafolati. Xotira effektiga ega.</p>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="img-wrapper">
                     <img src="https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg" alt="Ko'rpalar">
-                    <span class="tag">Yangi</span>
+                    <span class="tag" data-i18n="tagNew">Yangi</span>
                 </div>
                 <div class="product-info">
-                    <h3>Yumshoq Ko'rpalar</h3>
-                    <p>Qishda issiq, yozda salqin tutuvchi 100% tabiiy matodan premium ko'rpalar.</p>
+                    <h3 data-i18n="blanketTitle">Yumshoq Ko'rpalar</h3>
+                    <p data-i18n="blanketDesc">Qishda issiq, yozda salqin tutuvchi 100% tabiiy matodan premium ko'rpalar.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="img/1.jpg" alt="Premium To'plam">
+                    <span class="tag" data-i18n="tagPop">Ommabop</span>
+                </div>
+                <div class="product-info">
+                    <h3 data-i18n="prod3Title">Premium To'plam</h3>
+                    <p data-i18n="prod3Desc">Qishki sovuq kunlarida hamroh bo'ladigan ajoyib yopinchiq.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="img/2.jpg" alt="Orzudagidek To'shak">
+                    <span class="tag" data-i18n="tagComfort">Qulay</span>
+                </div>
+                <div class="product-info">
+                    <h3 data-i18n="prod4Title">Orzudagidek To'shak</h3>
+                    <p data-i18n="prod4Desc">Tuningiz osuda va qulay o'tishini ta'minlaydigan yumshoqlik.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="img/3.png" alt="Bolalar uchun">
+                    <span class="tag" data-i18n="tagSale">Chegirma</span>
+                </div>
+                <div class="product-info">
+                    <h3 data-i18n="prod5Title">Bolalar uchun</h3>
+                    <p data-i18n="prod5Desc">Farzandingiz yozda aslo terlamasligi uchun maxsus matodan tikilgan.</p>
                 </div>
             </div>
         </div>
@@ -68,8 +108,8 @@
     <!-- Kichik Galereya -->
     <section class="gallery">
         <div class="section-header">
-            <h2>Galereya</h2>
-            <p>Shinamlik sizning xonadoningizda</p>
+            <h2 data-i18n="galleryTitle">Galereya</h2>
+            <p data-i18n="galleryDesc">Shinamlik sizning xonadoningizda</p>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item item-main">
@@ -121,26 +161,26 @@
     <section class="contact-section" id="contact">
         <div class="contact-wrapper">
             <div class="contact-text">
-                <h2>Buyurtma berishga tayyormisiz?</h2>
-                <p>Biz bilan sizga qulay bo'lgan ijtimoiy tarmoq yoki telefon orqali tez oson aloqaga chiqing va bepul
+                <h2 data-i18n="contactTitle">Buyurtma berishga tayyormisiz?</h2>
+                <p data-i18n="contactDesc">Biz bilan sizga qulay bo'lgan ijtimoiy tarmoq yoki telefon orqali tez oson aloqaga chiqing va bepul
                     maslahat oling.</p>
             </div>
             <div class="social-cards">
                 <a href="tel:+998919959855" class="scard phone-card">
                     <div class="icon-blob"><i class="fa-solid fa-phone"></i></div>
-                    <span>Qo'ng'iroq</span>
+                    <span data-i18n="callLabel">Qo'ng'iroq</span>
                 </a>
                 <a href="https://t.me/+998919959855" target="_blank" class="scard tg-card">
                     <div class="icon-blob"><i class="fa-brands fa-telegram"></i></div>
-                    <span>Telegram</span>
+                    <span data-i18n="tgLabel">Telegram</span>
                 </a>
                 <a href="https://instagram.com/alisher821003" target="_blank" class="scard ig-card">
                     <div class="icon-blob"><i class="fa-brands fa-instagram"></i></div>
-                    <span>Instagram</span>
+                    <span data-i18n="igLabel">Instagram</span>
                 </a>
                 <a href="https://wa.me/998919959855" target="_blank" class="scard wa-card">
                     <div class="icon-blob"><i class="fa-brands fa-whatsapp"></i></div>
-                    <span>WhatsApp</span>
+                    <span data-i18n="waLabel">WhatsApp</span>
                 </a>
             </div>
         </div>
@@ -156,7 +196,7 @@
     <footer>
         <div class="footer-content">
             <div class="logo">Orom<span>.uz</span></div>
-            <p>&copy; 2026 Barcha huquqlar himoyalangan.</p>
+            <p data-i18n="footerText">&copy; 2026 Barcha huquqlar himoyalangan.</p>
         </div>
     </footer>
 
@@ -186,6 +226,138 @@
                 modal.style.display = "none";
             }
         });
+
+        // Translations Logic
+        const translations = {
+            uz: {
+                contactBtn: "Bog'lanish",
+                bannerBadge: "Yangi To'plam 2026",
+                bannerTitle: "Orzudagidek Qulaylik",
+                bannerDesc: "Sifatli ko'rpa va yostiqlar bilan har bir tun shirin tushlarga boy bo'lsin.",
+                buyBtn: 'Buyurtma berish <i class="fa-solid fa-arrow-right"></i>',
+                productsTitle: "Bizning Mahsulotlar",
+                productsDesc: "Sog'lig'ingiz va ajoyib dam olishingiz uchun",
+                tagPremium: "Premium",
+                pillowTitle: "Ortopedik Yostiqlar",
+                pillowDesc: "Bo'yin og'riqlarisiz, chuqur va tiniq uyqu kafolati. Xotira effektiga ega.",
+                tagNew: "Yangi",
+                blanketTitle: "Yumshoq Ko'rpalar",
+                blanketDesc: "Qishda issiq, yozda salqin tutuvchi 100% tabiiy matodan premium ko'rpalar.",
+                galleryTitle: "Galereya",
+                galleryDesc: "Shinamlik sizning xonadoningizda",
+                contactTitle: "Buyurtma berishga tayyormisiz?",
+                contactDesc: "Biz bilan sizga qulay bo'lgan ijtimoiy tarmoq yoki telefon orqali tez oson aloqaga chiqing va bepul maslahat oling.",
+                callLabel: "Qo'ng'iroq",
+                tgLabel: "Telegram",
+                igLabel: "Instagram",
+                waLabel: "WhatsApp",
+                footerText: "&copy; 2026 Barcha huquqlar himoyalangan.",
+                tagPop: "Ommabop",
+                prod3Title: "Premium To'plam",
+                prod3Desc: "Qishki sovuq kunlarida hamroh bo'ladigan ajoyib yopinchiq.",
+                tagComfort: "Qulay",
+                prod4Title: "Orzudagidek To'shak",
+                prod4Desc: "Tuningiz osuda va qulay o'tishini ta'minlaydigan yumshoqlik.",
+                tagSale: "Chegirma",
+                prod5Title: "Bolalar uchun",
+                prod5Desc: "Farzandingiz yozda aslo terlamasligi uchun maxsus matodan tikilgan.",
+                tagExclusive: "Eksklyuziv",
+                prod6Title: "Bambuk Yostiqlar",
+                prod6Desc: "100% tabiiy va ekologik toza materialdan tayyorlangan."
+            },
+            ru: {
+                contactBtn: "Связаться",
+                bannerBadge: "Новая Коллекция 2026",
+                bannerTitle: "Комфорт Вашей Мечты",
+                bannerDesc: "Пусть каждая ночь будет полна сладких снов с качественными одеялами и подушками.",
+                buyBtn: 'Заказать <i class="fa-solid fa-arrow-right"></i>',
+                productsTitle: "Наши Продукты",
+                productsDesc: "Для вашего здоровья и отличного отдыха",
+                tagPremium: "Премиум",
+                pillowTitle: "Ортопедические Подушки",
+                pillowDesc: "Гарантия глубокого сна без боли в шее. С эффектом памяти.",
+                tagNew: "Новинка",
+                blanketTitle: "Мягкие Одеяла",
+                blanketDesc: "Премиальные одеяла из 100% натуральной ткани, согревающие зимой и охлаждающие летом.",
+                galleryTitle: "Галерея",
+                galleryDesc: "Уют в вашем доме",
+                contactTitle: "Готовы сделать заказ?",
+                contactDesc: "Свяжитесь с нами быстро и легко через удобную вам социальную сеть или по телефону и получите бесплатную консультацию.",
+                callLabel: "Звонок",
+                tgLabel: "Telegram",
+                igLabel: "Instagram",
+                waLabel: "WhatsApp",
+                footerText: "&copy; 2026 Все права защищены.",
+                tagPop: "Популярно",
+                prod3Title: "Премиум Набор",
+                prod3Desc: "Отличное покрывало, которое составит вам компанию в холодные зимние дни.",
+                tagComfort: "Удобный",
+                prod4Title: "Кровать мечты",
+                prod4Desc: "Мягкость, обеспечивающая спокойную и комфортную ночь.",
+                tagSale: "Скидка",
+                prod5Title: "Для детей",
+                prod5Desc: "Сшито из специальной ткани, чтобы ваш ребенок не потел летом.",
+                tagExclusive: "Эксклюзив",
+                prod6Title: "Бамбуковые Подушки",
+                prod6Desc: "Изготовлено из 100% натурального и экологически чистого материала."
+            },
+            en: {
+                contactBtn: "Contact",
+                bannerBadge: "New Collection 2026",
+                bannerTitle: "Dream Comfort",
+                bannerDesc: "Let every night be full of sweet dreams with quality blankets and pillows.",
+                buyBtn: 'Order Now <i class="fa-solid fa-arrow-right"></i>',
+                productsTitle: "Our Products",
+                productsDesc: "For your health and great rest",
+                tagPremium: "Premium",
+                pillowTitle: "Orthopedic Pillows",
+                pillowDesc: "Deep sleep guarantee without neck pain. Featuring memory effect.",
+                tagNew: "New",
+                blanketTitle: "Soft Blankets",
+                blanketDesc: "Premium blankets made of 100% natural fabric, keeping you warm in winter and cool in summer.",
+                galleryTitle: "Gallery",
+                galleryDesc: "Coziness in your home",
+                contactTitle: "Ready to order?",
+                contactDesc: "Contact us quickly and easily via your preferred social network or phone and get a free consultation.",
+                callLabel: "Call",
+                tgLabel: "Telegram",
+                igLabel: "Instagram",
+                waLabel: "WhatsApp",
+                footerText: "&copy; 2026 All rights reserved.",
+                tagPop: "Popular",
+                prod3Title: "Premium Set",
+                prod3Desc: "An excellent coverlet that will accompany you on cold winter days.",
+                tagComfort: "Comfortable",
+                prod4Title: "Dream Bedding",
+                prod4Desc: "Softness ensuring a peaceful and comfortable night.",
+                tagSale: "Sale",
+                prod5Title: "For Kids",
+                prod5Desc: "Sewn from a special fabric so your child never sweats in summer.",
+                tagExclusive: "Exclusive",
+                prod6Title: "Bamboo Pillows",
+                prod6Desc: "Made from 100% natural and eco-friendly material."
+            }
+        };
+
+        const langSelect = document.getElementById('lang-select');
+        function changeLang(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            localStorage.setItem('lang', lang);
+        }
+        
+        langSelect.addEventListener('change', (e) => {
+            changeLang(e.target.value);
+        });
+
+        const savedLang = localStorage.getItem('lang') || 'uz';
+        langSelect.value = savedLang;
+        changeLang(savedLang);
     </script>
 </body>
 
