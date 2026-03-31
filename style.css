@@ -94,6 +94,49 @@ h1, h2, h3 {
     color: var(--accent);
 }
 
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 24px rgba(45, 42, 38, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.lang-btn {
+    border: 0;
+    background: transparent;
+    color: var(--text-sec);
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.lang-btn:hover {
+    color: var(--text-main);
+    background: rgba(212, 163, 115, 0.14);
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(181, 131, 90, 0.3);
+}
+
 .btn-sm {
     background: var(--text-main);
     color: #fff;
@@ -265,6 +308,34 @@ h1, h2, h3 {
 .product-info p {
     color: var(--text-sec);
     line-height: 1.5;
+}
+
+.product-meta {
+    margin-top: 1.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(45, 42, 38, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.price-label {
+    font-size: 0.9rem;
+    color: var(--text-sec);
+}
+
+.price-value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: rgba(212, 163, 115, 0.15);
+    color: var(--accent-dark);
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 /* ==========================
@@ -539,6 +610,15 @@ footer {
    Responsive
    ========================== */
 @media (max-width: 768px) {
+    .header-container {
+        padding: 0.9rem 1rem;
+        gap: 1rem;
+    }
+
+    .header-actions {
+        gap: 0.75rem;
+    }
+
     .banner-content h1 { font-size: 3rem; }
     
     .social-cards {
@@ -557,6 +637,28 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .lang-switcher {
+        width: fit-content;
+    }
+
+    .btn-sm {
+        padding-inline: 1.1rem;
+    }
+
+    .product-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
     .social-cards {
         grid-template-columns: 1fr;
     }
